@@ -4,6 +4,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    environment:
+      XDEBUG_CONFIG: remote_host=192.168.102.32
     ports:
      - "8080:80"
     volumes:
