@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9146cf5ab679c29798ec9ad96ed81372",
+    "content-hash": "93942944709acb78baee1a68e6ebd40b",
     "packages": [
         {
             "name": "api-skeletons/zf-doctrine-module-zend-hydrator",
@@ -42,6 +42,135 @@
             ],
             "description": "Corrects DoctrineModule classes to use zend-hydrator",
             "time": "2016-06-12T20:55:02+00:00"
+        },
+        {
+            "name": "api-skeletons/zf-oauth2-doctrine",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/API-Skeletons/zf-oauth2-doctrine.git",
+                "reference": "d08d08525522e6bf4549a9d987ad9e887a8aa4d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/API-Skeletons/zf-oauth2-doctrine/zipball/d08d08525522e6bf4549a9d987ad9e887a8aa4d1",
+                "reference": "d08d08525522e6bf4549a9d987ad9e887a8aa4d1",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/doctrine-module": "^1.2",
+                "doctrine/doctrine-orm-module": "^1.1.5",
+                "doctrine/orm": "^2.5.11",
+                "php": ">=7.1",
+                "zendframework/zend-config": "^2.6 || ^3.0",
+                "zendframework/zend-i18n": "^2.7",
+                "zendframework/zend-modulemanager": "^2.0",
+                "zendframework/zend-mvc": "^3.0",
+                "zendframework/zend-servicemanager": "^3.0",
+                "zfcampus/zf-mvc-auth": "^1.4.3",
+                "zfcampus/zf-oauth2": "^1.4"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.5",
+                "phpunit/phpunit": "^6.0",
+                "satooshi/php-coveralls": "^1.0",
+                "squizlabs/php_codesniffer": "^3.1",
+                "zendframework/zend-authentication": "^2.5",
+                "zendframework/zend-eventmanager": "^3.2",
+                "zendframework/zend-form": "^2.10",
+                "zendframework/zend-loader": "^2.4",
+                "zendframework/zend-log": "^2.9",
+                "zendframework/zend-serializer": "^2.7",
+                "zendframework/zend-test": "^3.1"
+            },
+            "suggest": {
+                "api-skeletons/zf-oauth2-doctrine-permissions-acl": "Access Control Lists for zf-oauth2-doctrine",
+                "bushbaby/zf-oauth2-doctrine-mutatetablenames": "Allows configuration of the table names that this module uses"
+            },
+            "type": "library",
+            "extra": {
+                "zf": {
+                    "component": "ZF\\OAuth2\\Doctrine",
+                    "config-provider": "ZF\\OAuth2\\Doctrine\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ZF\\OAuth2\\Doctrine\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Doctrine OAuth2 Server Adapter for Apigility",
+            "keywords": [
+                "apigility",
+                "doctrine",
+                "oauth2"
+            ],
+            "time": "2018-02-28T22:17:37+00:00"
+        },
+        {
+            "name": "api-skeletons/zf-oauth2-doctrine-identity",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/API-Skeletons/zf-oauth2-doctrine-identity.git",
+                "reference": "1426dbd136ff2145d08a5f1e6e094e551df39c72"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/API-Skeletons/zf-oauth2-doctrine-identity/zipball/1426dbd136ff2145d08a5f1e6e094e551df39c72",
+                "reference": "1426dbd136ff2145d08a5f1e6e094e551df39c72",
+                "shasum": ""
+            },
+            "require": {
+                "api-skeletons/zf-oauth2-doctrine": "~2.0 || ^3.0",
+                "container-interop/container-interop": "^1.1",
+                "gianarb/angry": "^0.1",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7",
+                "satooshi/php-coveralls": "^1.0",
+                "squizlabs/php_codesniffer": "^2.7",
+                "zendframework/zend-hydrator": "^2.2",
+                "zendframework/zend-i18n": "^2.7",
+                "zendframework/zend-test": "^3.0",
+                "zfcampus/zf-apigility": "^1.3",
+                "zfcampus/zf-apigility-doctrine": "^2.1"
+            },
+            "type": "library",
+            "extra": {
+                "zf": {
+                    "component": "ZF\\OAuth2\\Doctrine\\Identity",
+                    "config-provider": "ZF\\OAuth2\\Doctrine\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ZF\\OAuth2\\Doctrine\\Identity\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tom H Anderson",
+                    "email": "tom.h.anderson@gmail.com"
+                }
+            ],
+            "description": "Doctrine Enabled AuthenticatedIdentity",
+            "keywords": [
+                "apigility",
+                "doctrine",
+                "identity",
+                "oauth2"
+            ],
+            "time": "2018-03-10T04:43:19+00:00"
         },
         {
             "name": "bshaffer/oauth2-server-php",
@@ -927,6 +1056,39 @@
             "time": "2018-02-27T07:30:56+00:00"
         },
         {
+            "name": "gianarb/angry",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gianarb/angry.git",
+                "reference": "13406619ce76c873ae50e5e51c960982bd9a6071"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gianarb/angry/zipball/13406619ce76c873ae50e5e51c960982bd9a6071",
+                "reference": "13406619ce76c873ae50e5e51c960982bd9a6071",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.4 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0 || ^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GianArb\\Angry\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A collection of traits to defend classes from mis-use.",
+            "time": "2016-12-27T20:13:39+00:00"
+        },
+        {
             "name": "michelf/php-markdown",
             "version": "1.8.0",
             "source": {
@@ -1605,6 +1767,59 @@
             "time": "2017-02-22T14:31:10+00:00"
         },
         {
+            "name": "zendframework/zend-console",
+            "version": "2.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-console.git",
+                "reference": "e8aa08da83de3d265256c40ba45cd649115f0e18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-console/zipball/e8aa08da83de3d265256c40ba45cd649115f0e18",
+                "reference": "e8aa08da83de3d265256c40ba45cd649115f0e18",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0",
+                "zendframework/zend-stdlib": "^2.7.7 || ^3.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7.23 || ^6.4.3",
+                "zendframework/zend-coding-standard": "~1.0.0",
+                "zendframework/zend-filter": "^2.7.2",
+                "zendframework/zend-json": "^2.6 || ^3.0",
+                "zendframework/zend-validator": "^2.10.1"
+            },
+            "suggest": {
+                "zendframework/zend-filter": "To support DefaultRouteMatcher usage",
+                "zendframework/zend-validator": "To support DefaultRouteMatcher usage"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7.x-dev",
+                    "dev-develop": "2.8.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Console\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Build console applications using getopt syntax or routing, complete with prompts",
+            "keywords": [
+                "ZendFramework",
+                "console",
+                "zf"
+            ],
+            "time": "2018-01-25T19:08:04+00:00"
+        },
+        {
             "name": "zendframework/zend-crypt",
             "version": "3.2.1",
             "source": {
@@ -2068,6 +2283,73 @@
             "time": "2017-10-02T15:01:27+00:00"
         },
         {
+            "name": "zendframework/zend-i18n",
+            "version": "2.7.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-i18n.git",
+                "reference": "d3431e29cc00c2a1c6704e601d4371dbf24f6a31"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-i18n/zipball/d3431e29cc00c2a1c6704e601d4371dbf24f6a31",
+                "reference": "d3431e29cc00c2a1c6704e601d4371dbf24f6a31",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0 || ^5.6",
+                "zendframework/zend-stdlib": "^2.7 || ^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0.8 || ^5.7.15",
+                "zendframework/zend-cache": "^2.6.1",
+                "zendframework/zend-coding-standard": "~1.0.0",
+                "zendframework/zend-config": "^2.6",
+                "zendframework/zend-eventmanager": "^2.6.2 || ^3.0",
+                "zendframework/zend-filter": "^2.6.1",
+                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
+                "zendframework/zend-validator": "^2.6",
+                "zendframework/zend-view": "^2.6.3"
+            },
+            "suggest": {
+                "ext-intl": "Required for most features of Zend\\I18n; included in default builds of PHP",
+                "zendframework/zend-cache": "Zend\\Cache component",
+                "zendframework/zend-config": "Zend\\Config component",
+                "zendframework/zend-eventmanager": "You should install this package to use the events in the translator",
+                "zendframework/zend-filter": "You should install this package to use the provided filters",
+                "zendframework/zend-i18n-resources": "Translation resources",
+                "zendframework/zend-servicemanager": "Zend\\ServiceManager component",
+                "zendframework/zend-validator": "You should install this package to use the provided validators",
+                "zendframework/zend-view": "You should install this package to use the provided view helpers"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7-dev",
+                    "dev-develop": "2.8-dev"
+                },
+                "zf": {
+                    "component": "Zend\\I18n",
+                    "config-provider": "Zend\\I18n\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\I18n\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "homepage": "https://github.com/zendframework/zend-i18n",
+            "keywords": [
+                "i18n",
+                "zf2"
+            ],
+            "time": "2017-05-17T17:00:12+00:00"
+        },
+        {
             "name": "zendframework/zend-inputfilter",
             "version": "2.8.1",
             "source": {
@@ -2395,6 +2677,72 @@
                 "zf"
             ],
             "time": "2017-11-24T06:32:07+00:00"
+        },
+        {
+            "name": "zendframework/zend-mvc-console",
+            "version": "1.1.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-mvc-console.git",
+                "reference": "a9b5559f129c2e6cc3f3f32e54c2daa02b336301"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-mvc-console/zipball/a9b5559f129c2e6cc3f3f32e54c2daa02b336301",
+                "reference": "a9b5559f129c2e6cc3f3f32e54c2daa02b336301",
+                "shasum": ""
+            },
+            "require": {
+                "container-interop/container-interop": "^1.1",
+                "php": "^5.6 || ^7.0",
+                "zendframework/zend-console": "^2.6",
+                "zendframework/zend-eventmanager": "^2.6.2 || ^3.0",
+                "zendframework/zend-modulemanager": "^2.7.1",
+                "zendframework/zend-mvc": "^3.0.3",
+                "zendframework/zend-router": "^3.0",
+                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
+                "zendframework/zend-stdlib": "^2.7.5 || ^3.0",
+                "zendframework/zend-text": "^2.6",
+                "zendframework/zend-view": "^2.6.3"
+            },
+            "conflict": {
+                "zendframework/zend-mvc": "<3.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.5",
+                "squizlabs/php_codesniffer": "^2.3.1",
+                "zendframework/zend-filter": "^2.6.1",
+                "zendframework/zend-form": "^2.7"
+            },
+            "suggest": {
+                "zendframework/zend-filter": "^2.6.1, to filter rendered results"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev",
+                    "dev-develop": "1.2-dev"
+                },
+                "zf": {
+                    "component": "Zend\\Mvc\\Console"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Mvc\\Console\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "homepage": "https://github.com/zendframework/zend-mvc-console",
+            "keywords": [
+                "console",
+                "mvc",
+                "zf2"
+            ],
+            "time": "2016-08-29T19:09:11+00:00"
         },
         {
             "name": "zendframework/zend-paginator",
@@ -2728,6 +3076,53 @@
                 "zf2"
             ],
             "time": "2018-04-12T16:05:42+00:00"
+        },
+        {
+            "name": "zendframework/zend-text",
+            "version": "2.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-text.git",
+                "reference": "07ad9388e4d4f12620ad37b52a5b0e4ee7845f92"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-text/zipball/07ad9388e4d4f12620ad37b52a5b0e4ee7845f92",
+                "reference": "07ad9388e4d4f12620ad37b52a5b0e4ee7845f92",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5 || ^7.0",
+                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
+                "zendframework/zend-stdlib": "^2.7 || ^3.0"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "1.7.*",
+                "phpunit/phpunit": "~4.0",
+                "zendframework/zend-config": "^2.6"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev",
+                    "dev-develop": "2.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Text\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "homepage": "https://github.com/zendframework/zend-text",
+            "keywords": [
+                "text",
+                "zf2"
+            ],
+            "time": "2016-02-08T19:03:52+00:00"
         },
         {
             "name": "zendframework/zend-uri",
@@ -4176,59 +4571,6 @@
                 "zf2"
             ],
             "time": "2017-10-20T15:21:32+00:00"
-        },
-        {
-            "name": "zendframework/zend-console",
-            "version": "2.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zendframework/zend-console.git",
-                "reference": "e8aa08da83de3d265256c40ba45cd649115f0e18"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-console/zipball/e8aa08da83de3d265256c40ba45cd649115f0e18",
-                "reference": "e8aa08da83de3d265256c40ba45cd649115f0e18",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.6 || ^7.0",
-                "zendframework/zend-stdlib": "^2.7.7 || ^3.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5.7.23 || ^6.4.3",
-                "zendframework/zend-coding-standard": "~1.0.0",
-                "zendframework/zend-filter": "^2.7.2",
-                "zendframework/zend-json": "^2.6 || ^3.0",
-                "zendframework/zend-validator": "^2.10.1"
-            },
-            "suggest": {
-                "zendframework/zend-filter": "To support DefaultRouteMatcher usage",
-                "zendframework/zend-validator": "To support DefaultRouteMatcher usage"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.7.x-dev",
-                    "dev-develop": "2.8.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Zend\\Console\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "Build console applications using getopt syntax or routing, complete with prompts",
-            "keywords": [
-                "ZendFramework",
-                "console",
-                "zf"
-            ],
-            "time": "2018-01-25T19:08:04+00:00"
         },
         {
             "name": "zendframework/zend-debug",

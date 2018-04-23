@@ -82,6 +82,12 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-orm-module" />
       <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-router" />
+      <path value="$PROJECT_DIR$/vendor/api-skeletons/zf-oauth2-doctrine" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-i18n" />
+      <path value="$PROJECT_DIR$/vendor/gianarb/angry" />
+      <path value="$PROJECT_DIR$/vendor/api-skeletons/zf-oauth2-doctrine-identity" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-mvc-console" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-text" />
     </include_path>
   </component>
 </project>

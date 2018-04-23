@@ -5,6 +5,8 @@
       <sourceFolder url="file://$MODULE_DIR$/module/Application/src" isTestSource="false" packagePrefix="Application\" />
       <sourceFolder url="file://$MODULE_DIR$/module/Application/test" isTestSource="true" packagePrefix="ApplicationTest\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/api-skeletons/zf-doctrine-module-zend-hydrator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/api-skeletons/zf-oauth2-doctrine" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/api-skeletons/zf-oauth2-doctrine-identity" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bshaffer/oauth2-server-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/container-interop/container-interop" />
@@ -19,6 +21,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/instantiator" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/lexer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/orm" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/gianarb/angry" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/herrera-io/json" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/herrera-io/phar-update" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/justinrainbow/json-schema" />
@@ -48,18 +51,21 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-form" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-http" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-hydrator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-i18n" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-inputfilter" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-json" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-loader" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-math" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-modulemanager" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-mvc" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-mvc-console" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-paginator" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-permissions-acl" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-permissions-rbac" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-router" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-servicemanager" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-stdlib" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-text" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-uri" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-validator" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/zendframework/zend-view" />

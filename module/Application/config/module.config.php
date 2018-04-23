@@ -6,6 +6,10 @@
 
 namespace Application;
 
+use Application\Console\ClientService;
+use Application\Console\ClientServiceFactory;
+use Application\Console\OauthClientController;
+use Application\Console\OauthClientControllerFactory;
 use Application\Controller\IndexControllerFactory;
 use Zend\ServiceManager\Factory\InvokableFactory;
 
@@ -24,9 +28,30 @@ return [
             ],
         ],
     ],
+    'console' => [
+        'router' => [
+            'routes' => [
+                'oauth-create-client' => [
+                    'options' => [
+                        'route'    => 'oauth create-client <clientName> <clientPassword>',
+                        'defaults' => [
+                            'controller' => OauthClientController::class,
+                            'action'     => 'create',
+                        ],
+                    ],
+                ],
+            ],
+        ],
+    ],
+    'service_manager' => [
+        'factories' => [
+            ClientService::class => ClientServiceFactory::class
+        ]
+    ],
     'controllers' => [
         'factories' => [
             Controller\IndexController::class => InvokableFactory::class,
+            OauthClientController::class => OauthClientControllerFactory::class,
         ],
     ],
     'view_manager' => [

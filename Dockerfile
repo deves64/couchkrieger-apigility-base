@@ -25,11 +25,14 @@ FROM php:7.1-apache
 
 RUN apt-get update \
  && apt-get install -y git zlib1g-dev \
+ && apt-get install -y libicu-dev \
  && apt-get install --no-install-recommends --assume-yes --quiet ca-certificates curl git \
  && rm -rf /var/lib/apt/lists/* \
  && docker-php-ext-install zip \
  && docker-php-ext-install pdo_mysql \
  && docker-php-ext-install bcmath \
+ && docker-php-ext-configure intl \
+ && docker-php-ext-install intl \
  && a2enmod rewrite \
  && a2enmod headers \
  && sed -i 's!/var/www/html!/var/www/public!g' /etc/apache2/sites-available/000-default.conf \

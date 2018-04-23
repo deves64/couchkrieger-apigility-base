@@ -33,7 +33,11 @@
         "zfcampus/zf-apigility-documentation": "^1.2.3",
         "zfcampus/zf-development-mode": "^3.1",
         "zfcampus/zf-apigility-doctrine": "^2.2",
-        "doctrine/doctrine-orm-module": "1.1.8"
+        "doctrine/doctrine-orm-module": "1.1.8",
+        "api-skeletons/zf-oauth2-doctrine": "^2.0",
+        "api-skeletons/zf-oauth2-doctrine-identity": "^2.0",
+        "zendframework/zend-console": "^2.7",
+        "zendframework/zend-mvc-console": "^1.1"
     },
     "require-dev": {
         "zendframework/zend-developer-tools": "^1.1.1",

@@ -5,6 +5,10 @@
  * The previous config file has been stored in ./config/modules.config.old
  */
 return [
+    'Zend\Mvc\Console',
+    'ZF\OAuth2\Doctrine\Identity',
+    'ZF\OAuth2\Doctrine',
+    'Zend\I18n',
     'Zend\\Cache',
     'Zend\\Form',
     'Zend\\Db',
