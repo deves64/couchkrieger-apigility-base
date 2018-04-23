@@ -6,6 +6,7 @@
 
 namespace Application;
 
+use Application\Controller\IndexControllerFactory;
 use Zend\ServiceManager\Factory\InvokableFactory;
 
 return [
