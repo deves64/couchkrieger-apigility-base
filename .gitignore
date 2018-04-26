@@ -1,5 +1,5 @@
 .vagrant/
-.idea
+.idea/
 vendor/
 config/development.config.php
 data/cache/*
