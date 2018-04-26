@@ -37,7 +37,8 @@
         "api-skeletons/zf-oauth2-doctrine": "^2.0",
         "api-skeletons/zf-oauth2-doctrine-identity": "^2.0",
         "zendframework/zend-console": "^2.7",
-        "zendframework/zend-mvc-console": "^1.1"
+        "zendframework/zend-mvc-console": "^1.1",
+        "api-skeletons/zf-oauth2-doctrine-permissions-acl": "^2.0"
     },
     "require-dev": {
         "zendframework/zend-developer-tools": "^1.1.1",

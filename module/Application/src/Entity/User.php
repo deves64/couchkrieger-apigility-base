@@ -2,8 +2,11 @@
 
 namespace Application\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Zend\Stdlib\ArraySerializableInterface;
 use ZF\OAuth2\Doctrine\Entity\UserInterface;
+use ZF\OAuth2\Doctrine\Permissions\Acl\Role\ProviderInterface;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -12,15 +15,8 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="user")
  *
  */
-class User implements UserInterface, ArraySerializableInterface
+class User extends Entity implements UserInterface, ProviderInterface, ArraySerializableInterface
 {
-    /**
-     * @ORM\Id
-     * @ORM\Column(type="string")
-     * @ORM\GeneratedValue(strategy="UUID")
-     */
-    protected $id;
-
     /**
      * @ORM\Column(type="string", length=100)
      */
@@ -42,44 +38,36 @@ class User implements UserInterface, ArraySerializableInterface
     protected $password;
 
     /**
-     * @ORM\Column(type="datetimetz", name="created_at", nullable=true)
+     * @ORM\ManyToMany(targetEntity="Role", mappedBy="user")
      */
-    protected $createdAt;
+    protected $role;
 
     /**
-     * @ORM\Column(type="datetimetz", name="updated_at", nullable=true)
+     * @var
      */
-    protected $updatedAt;
-
-    /**
-     * @ORM\Column(type="boolean", nullable=true)
-     */
-    protected $suspended = true;
-
     protected $client;
 
+    /**
+     * @var
+     */
     protected $accessToken;
 
+    /**
+     * @var
+     */
     protected $authorizationCode;
 
+    /**
+     * @var
+     */
     protected $refreshToken;
 
     /**
-     * @return mixed
+     * DefaultUser constructor.
      */
-    public function getId()
+    public function __construct()
     {
-        return $this->id;
-    }
-
-    /**
-     * @param mixed $id
-     * @return User
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-        return $this;
+        $this->role= new ArrayCollection();
     }
 
     /**
@@ -155,74 +143,68 @@ class User implements UserInterface, ArraySerializableInterface
     }
 
     /**
-     * @return mixed
+     * @return ArrayCollection
      */
-    public function getCreatedAt()
+    public function getRole()
     {
-        return $this->createdAt;
+        return $this->role;
     }
 
     /**
-     * @param mixed $createdAt
-     * @return User
+     * @param Collection $role
+     * @return $this
      */
-    public function setCreatedAt($createdAt)
+    public function setRole(Collection $role)
     {
-        $this->createdAt = $createdAt;
+        $this->role = $role;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @param Role $role
+     * @return $this
      */
-    public function getUpdatedAt()
+    public function addRole(Role $role)
     {
-        return $this->updatedAt;
-    }
-
-    /**
-     * @param mixed $updatedAt
-     * @return User
-     */
-    public function setUpdatedAt($updatedAt)
-    {
-        $this->updatedAt = $updatedAt;
+        $this->role[] = $role;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @param Role $role
      */
-    public function getSuspended()
+    public function removeRole(Role $role)
     {
-        return $this->suspended;
+        $this->role->removeElement($role);
     }
 
     /**
-     * @param mixed $suspended
-     * @return User
+     * @return mixed
      */
-    public function setSuspended($suspended)
-    {
-        $this->suspended = $suspended;
-        return $this;
-    }
-
     public function getClient()
     {
         return $this->client;
     }
 
+    /**
+     * @return mixed
+     */
     public function getAccessToken()
     {
         return $this->accessToken;
     }
 
+    /**
+     * @return mixed
+     */
     public function getAuthorizationCode()
     {
         return $this->authorizationCode;
     }
 
+    /**
+     * @return mixed
+     */
     public function getRefreshToken()
     {
         return $this->refreshToken;
@@ -241,9 +223,6 @@ class User implements UserInterface, ArraySerializableInterface
                 case 'createdAt':
                     $this->setCreatedAt($value);
                     break;
-                case 'updatedAt':
-                    $this->setUpdatedAt($value);
-                    break;
                 case 'forename':
                     $this->setForename($value);
                     break;
@@ -256,9 +235,6 @@ class User implements UserInterface, ArraySerializableInterface
                 case 'password':
                     $this->setPassword($value);
                     break;
-                case 'suspended':
-                    $this->setSuspended($value);
-                    break;
                 default:
                     break;
             }
@@ -266,8 +242,7 @@ class User implements UserInterface, ArraySerializableInterface
 
         return $this;
     }
-
-        /**
+    /**
      * Return an array representation of the object
      *
      * @return array
@@ -277,12 +252,10 @@ class User implements UserInterface, ArraySerializableInterface
         return [
             'id'        => $this->getId(),
             'createdAt' => $this->getCreatedAt(),
-            'updatedAt' => $this->getUpdatedAt(),
             'forename'  => $this->getForename(),
             'surname'   => $this->getSurname(),
             'email'     => $this->getEmail(),
-            'password'  => $this->getPassword(),
-            'suspended' => $this->getSuspended()
+            'password'  => $this->getPassword()
         ];
     }
 }

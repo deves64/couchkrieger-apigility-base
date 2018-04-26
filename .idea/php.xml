@@ -88,6 +88,7 @@
       <path value="$PROJECT_DIR$/vendor/api-skeletons/zf-oauth2-doctrine-identity" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-mvc-console" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-text" />
+      <path value="$PROJECT_DIR$/vendor/api-skeletons/zf-oauth2-doctrine-permissions-acl" />
     </include_path>
   </component>
 </project>

@@ -2,6 +2,8 @@
 
 namespace Application\Console;
 
+use Application\Entity\Role;
+use Application\Entity\User;
 use Doctrine\ORM\EntityManager;
 use Zend\Crypt\Password\Bcrypt;
 use ZF\OAuth2\Doctrine\Entity\Client;
@@ -49,6 +51,23 @@ class ClientService
         $client->setClientId($clientName);
         $client->setSecret($this->bcrypt->create($clientPassword));
         $client->setRedirectUri('/oauth/receivecode');
+        $client->setGrantType(null);
+
+        $role = new Role();
+        $role->setName('administrator');
+
+        $entityManager->persist($role);
+
+        $user = new User();
+        $user->setForename('David');
+        $user->setSurname('Atayee');
+        $user->setEmail('david.atayee@gmail.com');
+        $user->setPassword($this->bcrypt->create($clientPassword));
+        $user->addRole($role);
+
+        $entityManager->persist($user);
+
+        $role->addUser($user);
 
         $entityManager->persist($client);
         $entityManager->flush();

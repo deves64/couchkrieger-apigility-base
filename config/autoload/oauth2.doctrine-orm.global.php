@@ -13,7 +13,7 @@ return array(
             'driver' => 'doctrine.driver.orm_default',
             'enable_default_entities' => true,
             'bcrypt_cost' => 14, # match zfcuser
-            'auth_identity_fields' => array('username'),
+            'auth_identity_fields' => array('email'),
             // Dynamically map the user_entity to the client_entity
             'dynamic_mapping' => array(
                 'user_entity' => array(
@@ -72,11 +72,16 @@ return array(
                         'user_id' => array(
                             'type' => 'field',
                             'name' => 'id',
-                            'datatype' => 'integer',
+                            'datatype' => 'string',
                         ),
                         'username' => array(
                             'type' => 'field',
                             'name' => 'username',
+                            'datatype' => 'string',
+                        ),
+                        'email' => array(
+                            'type' => 'field',
+                            'name' => 'email',
                             'datatype' => 'string',
                         ),
                         'password' => array(
@@ -121,7 +126,7 @@ return array(
                             'name' => 'user',
                             'entity_field_name' => 'id',
                             'entity' => $userEntity,
-                            'datatype' => 'integer',
+                            'datatype' => 'string',
                             'allow_null' => true,
                         ),
                     ),
@@ -158,7 +163,7 @@ return array(
                             'name' => 'user',
                             'entity_field_name' => 'id',
                             'entity' => $userEntity,
-                            'datatype' => 'integer',
+                            'datatype' => 'string',
                             'allow_null' => true,
                         ),
                     ),
@@ -195,7 +200,7 @@ return array(
                             'name' => 'user',
                             'entity_field_name' => 'id',
                             'entity' => $userEntity,
-                            'datatype' => 'integer',
+                            'datatype' => 'string',
                             'allow_null' => true,
                         ),
                     ),
@@ -242,7 +247,7 @@ return array(
                             'name' => 'user',
                             'entity_field_name' => 'id',
                             'entity' => $userEntity,
-                            'datatype' => 'integer',
+                            'datatype' => 'string',
                             'allow_null' => true,
                         ),
                     ),

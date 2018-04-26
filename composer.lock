@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "93942944709acb78baee1a68e6ebd40b",
+    "content-hash": "51dc496f50e084f78f6b79a00a9cdb94",
     "packages": [
         {
             "name": "api-skeletons/zf-doctrine-module-zend-hydrator",
@@ -171,6 +171,71 @@
                 "oauth2"
             ],
             "time": "2018-03-10T04:43:19+00:00"
+        },
+        {
+            "name": "api-skeletons/zf-oauth2-doctrine-permissions-acl",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/API-Skeletons/zf-oauth2-doctrine-permissions-acl.git",
+                "reference": "b4d7bd8ee608751c1a8a8fb581a07bb1606c0e64"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/API-Skeletons/zf-oauth2-doctrine-permissions-acl/zipball/b4d7bd8ee608751c1a8a8fb581a07bb1606c0e64",
+                "reference": "b4d7bd8ee608751c1a8a8fb581a07bb1606c0e64",
+                "shasum": ""
+            },
+            "require": {
+                "api-skeletons/zf-oauth2-doctrine": "~2.0 || ^3.0",
+                "api-skeletons/zf-oauth2-doctrine-identity": "~2.0",
+                "container-interop/container-interop": "^1.1",
+                "gianarb/angry": "^0.1",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "api-skeletons/coding-standard": "^1.0",
+                "phpunit/phpunit": "^5.7",
+                "satooshi/php-coveralls": "^1.0",
+                "zendframework/zend-hydrator": "^2.2",
+                "zendframework/zend-i18n": "^2.7",
+                "zendframework/zend-test": "^3.0",
+                "zfcampus/zf-apigility": "^1.3",
+                "zfcampus/zf-apigility-doctrine": "^2.1"
+            },
+            "type": "library",
+            "extra": {
+                "zf": {
+                    "component": "ZF\\OAuth2\\Doctrine\\Permissions\\Acl",
+                    "config-provider": "ZF\\OAuth2\\Doctrine\\Permissions\\Acl\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ZF\\OAuth2\\Doctrine\\Permissions\\Acl\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tom H Anderson",
+                    "email": "tom.h.anderson@gmail.com"
+                }
+            ],
+            "description": "ACL permissions for zf-oauth2-doctrine",
+            "keywords": [
+                "Authentication",
+                "acl",
+                "apigility",
+                "authorization",
+                "doctrine",
+                "oauth2",
+                "permissions"
+            ],
+            "time": "2018-03-27T22:47:33+00:00"
         },
         {
             "name": "bshaffer/oauth2-server-php",
